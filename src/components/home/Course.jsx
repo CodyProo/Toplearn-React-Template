@@ -2,9 +2,10 @@ import React from 'react';
 import { Col, Card, CardBody, CardImg } from 'reactstrap';
 import ClockImage from '../../assets/images/clock.png';
 
-const Course = ({ data }) => {
+const Course = ({ data, xl, lg, md, sm, xs }) => {
+	const sizes = { xl, lg, sm, md, xs };
 	return (
-		<Col className='mb-5' xl={3} lg={4} md={6} sm={6} xs={12}>
+		<Col className='mb-5' {...sizes}>
 			<Card>
 				<CardImg src={data.image}></CardImg>
 				<CardBody>

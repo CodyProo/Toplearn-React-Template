@@ -1,6 +1,5 @@
 import React from 'react';
 import { Row } from 'reactstrap';
-import LeftArrow from '../../assets/images/left-arrow.png';
 
 import MovieStream from '../../assets/images/courses/movie-stream.png';
 import ExcelImage from '../../assets/images/courses/Excel.jpg';
@@ -94,7 +93,15 @@ const Courses = ({ text }) => {
 			<CourseHeader text={text} />
 			<Row className='courses-content'>
 				{fakeData.map((element) => (
-					<Course data={element} key={element.title} />
+					<Course
+						xl={3}
+						lg={4}
+						md={6}
+						sm={6}
+						xs={12}
+						data={element}
+						key={element.title}
+					/>
 				))}
 			</Row>
 		</div>

@@ -2,7 +2,7 @@ import React from 'react';
 import CourseHeader from './Courses-Header';
 import ReactSlider from 'react-slick';
 
-import { Col, Card, CardBody, CardImg } from 'reactstrap';
+import { Card, CardBody, CardImg } from 'reactstrap';
 import ClockImage from '../../assets/images/clock.png';
 
 import MovieStream from '../../assets/images/courses/movie-stream.png';

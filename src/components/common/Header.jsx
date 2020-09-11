@@ -6,8 +6,9 @@ import Student_Image from '../../assets/images/status/student.svg';
 import Teacher_Image from '../../assets/images/status/teacher.svg';
 import Time_Image from '../../assets/images/status/time.svg';
 import HeaderSmall from './Header-sm';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ is_show_content }) => {
 	const [OpenSection, HandleSection] = React.useState(false);
 	const Handler = () => HandleSection((prev) => !prev);
 	const activeClass = OpenSection ? 'panel_section_body_active' : '';
@@ -24,7 +25,7 @@ const Header = () => {
 						</a>
 					</li>
 					<li>
-						<a href='#'>آخرین دوره ها</a>
+						<Link to='/archive/courses'>آخرین دوره ها</Link>
 					</li>
 					<li>
 						<a href='#'>معرفی مدرسین</a>
@@ -53,42 +54,44 @@ const Header = () => {
 				</div>
 			</nav>
 
-			<div className='header-content'>
-				<div>
-					<h1>خودآموزی ، کسب تجربه ، ورود به بازار کار با تاپ لرن</h1>
-					<h1>با کمترینــــ هزینه خودت حرفه ایــــ یاد بگیـر</h1>
-				</div>
-				<div className='input-header'>
-					<input type='text' placeholder='چی میخای یاد بگیری ؟' />
-					<i className='fa fa-search'></i>
-				</div>
-				<div className='header-status'>
-					<ul>
-						<li>
-							<span>158,884</span>
-							<div>
-								<img src={Time_Image} alt='' />
-								<span>دقیقه آموزش</span>
-							</div>
-						</li>
-						<li>
-							<span>106</span>
-							<div>
-								<img src={Teacher_Image} alt='' />
-								<span>مدرس مجرب</span>
-							</div>
-						</li>
+			{is_show_content && (
+				<div className='header-content'>
+					<div>
+						<h1>خودآموزی ، کسب تجربه ، ورود به بازار کار با تاپ لرن</h1>
+						<h1>با کمترینــــ هزینه خودت حرفه ایــــ یاد بگیـر</h1>
+					</div>
+					<div className='input-header'>
+						<input type='text' placeholder='چی میخای یاد بگیری ؟' />
+						<i className='fa fa-search'></i>
+					</div>
+					<div className='header-status'>
+						<ul>
+							<li>
+								<span>158,884</span>
+								<div>
+									<img src={Time_Image} alt='' />
+									<span>دقیقه آموزش</span>
+								</div>
+							</li>
+							<li>
+								<span>106</span>
+								<div>
+									<img src={Teacher_Image} alt='' />
+									<span>مدرس مجرب</span>
+								</div>
+							</li>
 
-						<li>
-							<span>131,845</span>
-							<div>
-								<img src={Student_Image} alt='' />
-								<span>نفر دانشجو</span>
-							</div>
-						</li>
-					</ul>
+							<li>
+								<span>131,845</span>
+								<div>
+									<img src={Student_Image} alt='' />
+									<span>نفر دانشجو</span>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
-			</div>
+			)}
 
 			<div className={`panel_section_body ${activeClass}`}>
 				<ul>
