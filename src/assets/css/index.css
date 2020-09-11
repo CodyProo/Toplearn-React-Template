@@ -642,6 +642,12 @@ header .header-small .fa-close {
 	color: #fff;
 }
 
+.course-title-section {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
 @media (min-width: 300px) {
 	header .header-content div h1 {
 		font-size: 15px;
@@ -754,11 +760,38 @@ header .header-small .fa-close {
 	header nav ul li {
 		margin-left: 30px;
 	}
+
+	.course-title-container {
+		display: flex;
+	}
+	.course-title-container .course-title li a {
+		font-size: 10px;
+	}
+	.spc-section span {
+		font-size: 10px;
+	}
 }
 
 @media (min-width: 1200px) {
+	.course-title-container .course-title li a {
+		font-size: 13px;
+	}
+	.spc-section span {
+		font-size: 12px;
+	}
+}
+
+@media (min-width: 1300px) {
+	.course-title-container .course-title li a,
+	.spc-section span {
+		font-size: 14px;
+	}
 	header nav {
-		width: 1150px;
+		width: 1200px;
+	}
+	.course-title-section {
+		width: 1200px;
+		margin: auto;
 	}
 }
 

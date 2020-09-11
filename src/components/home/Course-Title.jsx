@@ -142,37 +142,39 @@ const Course_Title = () => {
 
 	return (
 		<div className='course-title-container'>
-			<ul className='course-title'>
-				{Sections.map((element) => (
-					<li
-						className='title'
-						key={element.text}
-						onMouseEnter={() => onHoverEvent(element.text, true)}
-						onMouseLeave={() => onHoverEvent(element.text, false)}>
-						<a
-							href='#'
-							className={`${element.isopen ? 'text-blue' : ''} ${
-								element.data.length == 0 ? 'ml-4' : ''
-							}`}>
-							{element.text}
-						</a>
-						{element.data.length > 0 && <img src={CaretDown} />}
-						<ul
-							className={`dropdown-section ${
-								element.isopen ? 'panel_section_body_active' : ''
-							}`}>
-							{element.data.map((data) => (
-								<li key={data}>
-									<a href='#'>{data}</a>
-								</li>
-							))}
-						</ul>
-					</li>
-				))}
-			</ul>
-			<div className='spc-section'>
-				<img src={DeafImage} />
-				<span>مخصوص ناشنوایان</span>
+			<div className='course-title-section'>
+				<ul className='course-title'>
+					{Sections.map((element) => (
+						<li
+							className='title'
+							key={element.text}
+							onMouseEnter={() => onHoverEvent(element.text, true)}
+							onMouseLeave={() => onHoverEvent(element.text, false)}>
+							<a
+								href='#'
+								className={`${element.isopen ? 'text-blue' : ''} ${
+									element.data.length == 0 ? 'ml-4' : ''
+								}`}>
+								{element.text}
+							</a>
+							{element.data.length > 0 && <img src={CaretDown} />}
+							<ul
+								className={`dropdown-section ${
+									element.isopen ? 'panel_section_body_active' : ''
+								}`}>
+								{element.data.map((data) => (
+									<li key={data}>
+										<a href='#'>{data}</a>
+									</li>
+								))}
+							</ul>
+						</li>
+					))}
+				</ul>
+				<div className='spc-section'>
+					<img src={DeafImage} />
+					<span>مخصوص ناشنوایان</span>
+				</div>
 			</div>
 		</div>
 	);
