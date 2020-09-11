@@ -452,6 +452,7 @@ header .panel_section_body ul li a span {
 	margin: 20px 0 10px 0;
 	padding-bottom: 15px;
 	border-bottom: 2px solid #eaeff2;
+	flex-wrap: wrap;
 }
 
 .courses-container .courses-content .card .card-body .content::before {
@@ -654,6 +655,15 @@ header .header-small .fa-close {
 		line-height: 30px;
 	}
 
+	.courses-container .courses-title {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.courses-container .courses-content .card .card-img {
+		height: 250px;
+	}
+
 	header .input-header {
 		width: 90%;
 		height: 40px;
@@ -678,9 +688,14 @@ header .header-small .fa-close {
 	}
 	header .header-status,
 	.course-title-container,
-	header nav ul,
-	.courses-container {
+	header nav ul {
 		display: none;
+	}
+}
+
+@media (min-width: 450px) {
+	.courses-container .courses-content .card .card-img {
+		height: 300px;
 	}
 }
 
@@ -694,6 +709,16 @@ header .header-small .fa-close {
 	}
 	header .input-header i {
 		left: 3%;
+	}
+}
+
+@media (min-width: 585px) {
+	.courses-container .courses-content .card .card-img {
+		height: 180px;
+	}
+	.courses-container .courses-title {
+		flex-direction: row;
+		justify-content: space-between;
 	}
 }
 
@@ -711,6 +736,15 @@ header .header-small .fa-close {
 	header .header-content div h1 {
 		font-size: 23px;
 		line-height: 60px;
+	}
+	.courses-container .courses-content .card .card-img {
+		height: 200px;
+	}
+}
+
+@media (min-width: 800px) {
+	.courses-container .courses-content .card .card-img {
+		height: 250px;
 	}
 }
 
@@ -751,6 +785,9 @@ header .header-small .fa-close {
 		height: 50px;
 		margin: 40px 0;
 	}
+	.courses-container .courses-content .card .card-img {
+		height: 220px;
+	}
 }
 
 @media (min-width: 1100px) {
@@ -779,6 +816,9 @@ header .header-small .fa-close {
 	.spc-section span {
 		font-size: 12px;
 	}
+	.courses-container .courses-content .card .card-img {
+		height: 200px;
+	}
 }
 
 @media (min-width: 1300px) {
@@ -787,11 +827,17 @@ header .header-small .fa-close {
 		font-size: 14px;
 	}
 	header nav {
-		width: 1200px;
+		width: 1300px;
 	}
 	.course-title-section {
-		width: 1200px;
+		width: 1300px;
 		margin: auto;
+	}
+}
+
+@media (min-width: 1400px) {
+	.courses-container {
+		width: 1300px;
 	}
 }
 

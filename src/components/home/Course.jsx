@@ -4,7 +4,7 @@ import ClockImage from '../../assets/images/clock.png';
 
 const Course = ({ data }) => {
 	return (
-		<Col sm={12} className="mb-5" md={6} xl={3} md={4}>
+		<Col className='mb-5' xl={3} lg={4} md={6} sm={6} xs={12}>
 			<Card>
 				<CardImg src={data.image}></CardImg>
 				<CardBody>

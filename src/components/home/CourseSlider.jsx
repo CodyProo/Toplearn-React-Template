@@ -99,6 +99,26 @@ const CourseSlider = ({ text }) => {
 				slidesPerRow={4}
 				autoplay
 				centerPadding
+				responsive={[
+					{
+						breakpoint: 585,
+						settings: {
+							slidesPerRow: 1,
+						},
+					},
+					{
+						breakpoint: 1000,
+						settings: {
+							slidesPerRow: 2,
+						},
+					},
+					{
+						breakpoint: 1200,
+						settings: {
+							slidesPerRow: 3,
+						},
+					},
+				]}
 				slidesToScroll={1}>
 				{fakeData.map((data) => (
 					<div className='px-1 text-right'>
