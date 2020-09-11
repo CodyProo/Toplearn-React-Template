@@ -13,7 +13,11 @@ const Header = ({ is_show_content }) => {
 	const Handler = () => HandleSection((prev) => !prev);
 	const activeClass = OpenSection ? 'panel_section_body_active' : '';
 	const [OpenNav, ToggleNav] = React.useState(false);
-	const HandlerToggleNav = () => ToggleNav((prev) => !prev);
+	const HandlerToggleNav = () => {
+		ToggleNav((prev) => !prev);
+		if (!OpenNav) document.body.style.overflow = 'hidden';
+		else document.body.style.overflow = 'unset';
+	};
 
 	return (
 		<header>

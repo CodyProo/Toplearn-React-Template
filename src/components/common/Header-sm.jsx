@@ -143,52 +143,54 @@ const HeaderSmall = ({ isopen, toggleNav }) => {
 
 	return (
 		<div
-			className={`header-small ${
+			className={`header-small-container ${
 				isopen ? 'panel_section_body_active open-navbar-sm' : ''
 			}`}>
-			<i className='fa fa-close' onClick={toggleNav}></i>
+			<div className='header-small'>
+				<i className='fa fa-close' onClick={toggleNav}></i>
 
-			<div className='text-center'>
-				<img src={Toplearn_Logo} />
-			</div>
-			<div className='header-small-input'>
-				<input type='text' placeholder='جستوجو کنید' />
-				<i className='fa fa-search'></i>
-			</div>
-			<ul>
-				<li>
-					<a href='#'>آموزش های تاپ لرن</a>
-				</li>
-
-				{Sections.map((courses_data) => (
-					<li
-						className={courses_data.isopen ? 'put-start' : ''}
-						onClick={() =>
-							onHoverEvent(courses_data.text, !courses_data.isopen)
-						}
-						key={courses_data.text}>
-						<div className='d-flex flex-column'>
-							<div>
-								<a href='#'>{courses_data.text}</a>
-								{courses_data.data.length > 0 && (
-									<a href='#' className='mr-auto'>
-										<i className='fa fa-plus'></i>
-									</a>
-								)}
-							</div>
-							<Collapse isOpen={courses_data.isopen}>
-								<div className='menu'>
-									{courses_data.data.map((ele) => (
-										<a href='#' key={ele}>
-											{ele}
-										</a>
-									))}
-								</div>
-							</Collapse>
-						</div>
+				<div className='text-center'>
+					<img src={Toplearn_Logo} />
+				</div>
+				<div className='header-small-input'>
+					<input type='text' placeholder='جستوجو کنید' />
+					<i className='fa fa-search'></i>
+				</div>
+				<ul>
+					<li>
+						<a href='#'>آموزش های تاپ لرن</a>
 					</li>
-				))}
-			</ul>
+
+					{Sections.map((courses_data) => (
+						<li
+							className={courses_data.isopen ? 'put-start' : ''}
+							onClick={() =>
+								onHoverEvent(courses_data.text, !courses_data.isopen)
+							}
+							key={courses_data.text}>
+							<div className='d-flex flex-column'>
+								<div>
+									<a href='#'>{courses_data.text}</a>
+									{courses_data.data.length > 0 && (
+										<a href='#' className='mr-auto'>
+											<i className='fa fa-plus'></i>
+										</a>
+									)}
+								</div>
+								<Collapse isOpen={courses_data.isopen}>
+									<div className='menu'>
+										{courses_data.data.map((ele) => (
+											<a href='#' key={ele}>
+												{ele}
+											</a>
+										))}
+									</div>
+								</Collapse>
+							</div>
+						</li>
+					))}
+				</ul>
+			</div>
 		</div>
 	);
 };

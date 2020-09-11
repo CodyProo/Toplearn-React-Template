@@ -14,9 +14,21 @@ const ArchiveCourseSections = ({ Sections }) => {
 		<Col className='options-select' xl={3} lg={4} sm={12}>
 			<Card className='selectPrice'>
 				<CardBody>
-					<h1 className={!PriceSec ? 'pb-2' : ''} onClick={HandlePriceSec}>
-						فلیتر براساس قیمت
-					</h1>
+					{!mustOpenFirst ? (
+						<div className='d-flex w-100 justify-content-between align-items-center'>
+							<h1 className={!PriceSec ? 'pb-2' : ''} onClick={HandlePriceSec}>
+								فلیتر براساس قیمت
+							</h1>
+							<i
+								className={`fa fa-chevron-${!PriceSec ? 'up' : 'down'} ${
+									!PriceSec ? 'pb-2' : ''
+								}`}></i>
+						</div>
+					) : (
+						<h1 className={!PriceSec ? 'pb-2' : ''} onClick={HandlePriceSec}>
+							فلیتر براساس قیمت
+						</h1>
+					)}
 					{PriceSec && <hr />}
 					<Collapse isOpen={PriceSec}>
 						<ul>
@@ -35,9 +47,21 @@ const ArchiveCourseSections = ({ Sections }) => {
 			</Card>
 			<Card className='my-4 selectTitle'>
 				<CardBody>
-					<h1 onClick={HandleTitleSec} className={!TitleSec ? 'pb-2' : ''}>
-						فیلتر براساس دسته بندی
-					</h1>
+					{!mustOpenFirst ? (
+						<div className='d-flex w-100 justify-content-between align-items-center'>
+							<h1 className={!TitleSec ? 'pb-2' : ''} onClick={HandleTitleSec}>
+								فیلتر براساس دسته بندی
+							</h1>
+							<i
+								className={`fa fa-chevron-${!TitleSec ? 'up' : 'down'} ${
+									!TitleSec ? 'pb-2' : ''
+								}`}></i>
+						</div>
+					) : (
+						<h1 className={!TitleSec ? 'pb-2' : ''} onClick={HandleTitleSec}>
+							فیلتر براساس دسته بندی
+						</h1>
+					)}
 					{TitleSec && <hr />}
 					<Collapse isOpen={TitleSec}>
 						<ul>

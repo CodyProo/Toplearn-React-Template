@@ -510,18 +510,15 @@ header .panel_section_body ul li a span {
 header .header-small {
 	position: absolute;
 	height: 100%;
-	width: 0;
-	overflow: hidden;
-	z-index: 999;
-	overflow-y: scroll;
+	width: 300px;
 	overflow-x: hidden;
+	z-index: 999;
 	background: #11293b;
 	top: 0;
 	right: 0;
 	padding: 40px 0;
-	visibility: hidden;
-	opacity: 0;
 	transition: 0.6s all;
+	overflow-y: auto;
 }
 
 header .header-small .header-small-input {
@@ -1144,6 +1141,26 @@ header .header-small .fa-close {
 	}
 }
 
+header .header-small-container {
+	position: absolute;
+	height: 100%;
+	width: 0;
+	transition: 0.6s all;
+	overflow: hidden;
+	background: rgba(0, 0, 0, 0.7);
+	top: 0;
+	right: 0;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 999;
+}
+
 .open-navbar-sm {
-	width: 300px !important;
+	width: 100% !important;
+}
+
+.archive-courses-container .fa-chevron-up,
+.archive-courses-container .fa-chevron-down {
+	font-size: 10px;
+	color: #999 !important;
 }
