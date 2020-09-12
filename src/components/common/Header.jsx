@@ -50,12 +50,20 @@ const Header = ({ is_show_content }) => {
 						<a href='#'>درباره با ما</a>
 					</li>
 				</ul>
+				{/* login */}
 				<i onClick={HandlerToggleNav} className='fa fa-bars'></i>
 				<div className='panel_section' onClick={Handler}>
 					<img src={Panel_Section_Image} alt='' />
 					<span>Mohammad_1382__</span>
 					<i className='fa fa-caret-down'></i>
 				</div>
+
+				{/* must login */}
+				{/* <div className='panel_section'>
+					<span>ورود</span>
+					<span>/</span>
+					<span> ثبت نام </span>
+				</div> */}
 			</nav>
 
 			{is_show_content && (
@@ -97,6 +105,7 @@ const Header = ({ is_show_content }) => {
 				</div>
 			)}
 
+			{/* when you login */}
 			<div className={`panel_section_body ${activeClass}`}>
 				<ul>
 					<li>

@@ -15,6 +15,7 @@ import XamarineForms from '../assets/images/courses/XamarineForms.jpg';
 import WORKAPI from '../assets/images/courses/API.png';
 
 import ArchiveCoursesContent from '../components/archive-courses/ArchiveCoursesContents';
+import Footer from '../components/common/Footer';
 
 const ArchiveCourses = () => {
 	const [Sections, ChangeSection] = React.useState([
@@ -224,18 +225,20 @@ const ArchiveCourses = () => {
 	];
 
 	return (
-		<Layout>
-			<div className='archive-courses-container courses-container'>
-				<ArchiveCoursesTitle />
-				<ArchiveCourseSearch />
-				<div className='archive-courses-content mt-4'>
-					<Row className='courses-content'>
-						<ArchiveCourseSections Sections={Sections} />
-						<ArchiveCoursesContent fakeData={fakeData} />
-					</Row>
+		<Footer>
+			<Layout>
+				<div className='archive-courses-container courses-container'>
+					<ArchiveCoursesTitle />
+					<ArchiveCourseSearch />
+					<div className='archive-courses-content mt-4'>
+						<Row className='courses-content'>
+							<ArchiveCourseSections Sections={Sections} />
+							<ArchiveCoursesContent fakeData={fakeData} />
+						</Row>
+					</div>
 				</div>
-			</div>
-		</Layout>
+			</Layout>
+		</Footer>
 	);
 };
 
