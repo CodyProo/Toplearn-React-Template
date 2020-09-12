@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Collapse } from 'reactstrap';
 import Toplearn_Logo from '../../assets/images/logo/toplearn-logo.svg';
 
-const HeaderSmall = ({ isopen, toggleNav }) => {
+const HeaderSmall = ({ isopen, toggleNav, closeNav }) => {
 	const [Sections, ChangeSection] = React.useState([
 		{
 			text: 'برنامه نویسی موبایل',
@@ -151,9 +151,7 @@ const HeaderSmall = ({ isopen, toggleNav }) => {
 				<i className='fa fa-close' onClick={toggleNav}></i>
 
 				<div className='text-center'>
-					<Link to='/'>
-						<img src={Toplearn_Logo} />
-					</Link>
+					<img src={Toplearn_Logo} onClick={closeNav} />
 				</div>
 				<div className='header-small-input'>
 					<input type='text' placeholder='جستوجو کنید' />

@@ -19,6 +19,11 @@ const Header = ({ is_show_content }) => {
 		else document.body.style.overflow = 'unset';
 	};
 
+	const CloseNavChangeRoute = () => {
+		document.body.style.overflow = 'unset';
+		ToggleNav(false);
+	};
+
 	return (
 		<header>
 			<nav>
@@ -137,7 +142,11 @@ const Header = ({ is_show_content }) => {
 				</ul>
 			</div>
 
-			<HeaderSmall isopen={OpenNav} toggleNav={HandlerToggleNav} />
+			<HeaderSmall
+				closeNav={CloseNavChangeRoute}
+				isopen={OpenNav}
+				toggleNav={HandlerToggleNav}
+			/>
 		</header>
 	);
 };
