@@ -6,9 +6,10 @@ import Student_Image from '../../assets/images/status/student.svg';
 import Teacher_Image from '../../assets/images/status/teacher.svg';
 import Time_Image from '../../assets/images/status/time.svg';
 import HeaderSmall from './Header-sm';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const Header = ({ is_show_content }) => {
+	const history = useHistory();
 	const [OpenSection, HandleSection] = React.useState(false);
 	const Handler = () => HandleSection((prev) => !prev);
 	const activeClass = OpenSection ? 'panel_section_body_active' : '';
@@ -22,6 +23,7 @@ const Header = ({ is_show_content }) => {
 	const CloseNavChangeRoute = () => {
 		document.body.style.overflow = 'unset';
 		ToggleNav(false);
+		history.push('/');
 	};
 
 	return (
