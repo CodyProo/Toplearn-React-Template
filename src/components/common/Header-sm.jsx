@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Collapse } from 'reactstrap';
 import Toplearn_Logo from '../../assets/images/logo/toplearn-logo.svg';
 
@@ -150,7 +151,9 @@ const HeaderSmall = ({ isopen, toggleNav }) => {
 				<i className='fa fa-close' onClick={toggleNav}></i>
 
 				<div className='text-center'>
-					<img src={Toplearn_Logo} />
+					<Link to='/'>
+						<img src={Toplearn_Logo} />
+					</Link>
 				</div>
 				<div className='header-small-input'>
 					<input type='text' placeholder='جستوجو کنید' />
@@ -158,7 +161,7 @@ const HeaderSmall = ({ isopen, toggleNav }) => {
 				</div>
 				<ul>
 					<li>
-						<a href='#'>آموزش های تاپ لرن</a>
+						<Link to='/'>آموزش های تاپ لرن</Link>
 					</li>
 
 					{Sections.map((courses_data) => (

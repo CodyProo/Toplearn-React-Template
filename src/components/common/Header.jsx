@@ -24,9 +24,9 @@ const Header = ({ is_show_content }) => {
 			<nav>
 				<ul>
 					<li>
-						<a href='#'>
+						<Link to='/'>
 							<img src={Toplearn_Logo} alt='' />
-						</a>
+						</Link>
 					</li>
 					<li>
 						<Link to='/archive/courses'>آخرین دوره ها</Link>
