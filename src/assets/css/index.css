@@ -1609,10 +1609,6 @@ footer p {
 		width: 100% !important;
 	}
 
-	.archive-teachers-container {
-		width: 350px;
-	}
-
 	.archive-teachers-container .archive-teachers-content .card .card-img {
 		height: 400px;
 	}
@@ -1622,6 +1618,10 @@ footer p {
 	.courses-container .courses-content .card .card-img,
 	.single-teachers-container .courses-content .card .card-img {
 		height: 300px;
+	}
+
+	.archive-teachers-container {
+		width: 350px;
 	}
 
 	.single-course-container .single-course-content .course-co h1 {
