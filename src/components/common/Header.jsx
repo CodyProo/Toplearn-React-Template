@@ -39,7 +39,7 @@ const Header = ({ is_show_content }) => {
 						<Link to='/archive/courses'>آخرین دوره ها</Link>
 					</li>
 					<li>
-						<a href='#'>معرفی مدرسین</a>
+						<Link to='/archive/teachers'>معرفی مدرسین</Link>
 					</li>
 					<li>
 						<a href='#'>بلاگ</a>
@@ -58,8 +58,8 @@ const Header = ({ is_show_content }) => {
 					</li>
 				</ul>
 				{/* login */}
-				{/* <i onClick={HandlerToggleNav} className='fa fa-bars'></i>
-				<div className='panel_section' onClick={Handler}>
+				<i onClick={HandlerToggleNav} className='fa fa-bars'></i>
+				{/* <div className='panel_section' onClick={Handler}>
 					<img src={Panel_Section_Image} alt='' />
 					<span>Mohammad_1382__</span>
 					<i className='fa fa-caret-down'></i>

@@ -1316,10 +1316,71 @@ footer p {
 	object-fit: cover;
 }
 
+.archive-teachers-container {
+	width: 85%;
+	margin: auto;
+}
+
+.archive-teachers-container .archive-teachers-title {
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.archive-teachers-container .archive-teachers-title h1 {
+	color: #1e2f38;
+	font-size: 18px;
+}
+
+.archive-teachers-container .archive-teachers-title span {
+	font-size: 13px;
+}
+
+.archive-teachers-container .archive-teachers-content .card .card-img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+}
+.archive-teachers-container .archive-teachers-content .card,
+.archive-teachers-container .archive-teachers-content .card .card-img {
+	border-top-left-radius: 30% !important;
+	transition: 0.6s all;
+	cursor: pointer;
+}
+.archive-teachers-container .archive-teachers-content .card:hover,
+.archive-teachers-container .archive-teachers-content .card .card-img:hover {
+	border-top-left-radius: unset !important;
+}
+
+.archive-teachers-container .archive-teachers-content .card .card-body a {
+	color: #1e2f38;
+	font-size: 15px;
+	text-decoration: none;
+	margin-right: 10px;
+	transition: 0.6s all;
+}
+
+.archive-teachers-container .archive-teachers-content .card .card-body svg {
+	color: #b0b9be;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+.content-teacher:hover a {
+	color: #00bffe !important;
+}
+
 @media (min-width: 300px) {
 	header .header-content div h1 {
 		font-size: 15px;
 		line-height: 30px;
+	}
+
+	.archive-teachers-container .archive-teachers-title {
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
 	}
 
 	.sign-container .card.card.card-content img {
@@ -1464,6 +1525,14 @@ footer p {
 	.sign-container .card.card-content button {
 		width: 100% !important;
 	}
+
+	.archive-teachers-container {
+		width: 350px;
+	}
+
+	.archive-teachers-container .archive-teachers-content .card .card-img {
+		height: 400px;
+	}
 }
 
 @media (min-width: 450px) {
@@ -1552,6 +1621,16 @@ footer p {
 		margin: auto;
 	}
 
+	.archive-teachers-container {
+		width: 90%;
+	}
+
+	.archive-teachers-container .archive-teachers-title {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
 	.single-course-container .comments ul li .comment-container {
 		width: 100%;
 	}
@@ -1634,6 +1713,9 @@ footer p {
 	.courses-container .courses-content .card .card-img {
 		height: 250px;
 	}
+	.archive-teachers-container .archive-teachers-content .card .card-img {
+		height: 500px;
+	}
 	.sign-container .card.card.card-one {
 		display: flex;
 	}
@@ -1665,6 +1747,9 @@ footer p {
 @media (min-width: 1000px) {
 	.fa-bars {
 		display: none;
+	}
+	.archive-teachers-container .archive-teachers-content .card .card-img {
+		height: 300px;
 	}
 	header nav ul {
 		display: flex;
@@ -1722,6 +1807,9 @@ footer p {
 	header nav ul li a {
 		font-size: 14px;
 	}
+	.archive-teachers-container .archive-teachers-content .card .card-img {
+		height: 350px;
+	}
 	header nav ul li {
 		margin-left: 30px;
 	}
@@ -1740,6 +1828,12 @@ footer p {
 @media (min-width: 1200px) {
 	.course-title-container .course-title li a {
 		font-size: 13px;
+	}
+	.archive-teachers-container .archive-teachers-content .card .card-img {
+		height: 280px;
+	}
+	.archive-teachers-container {
+		width: 1100px;
 	}
 	.archive-courses-container .archive-courses-search .archive-courses-select {
 		width: 350px;
