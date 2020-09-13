@@ -1321,6 +1321,11 @@ footer p {
 		font-size: 15px;
 		line-height: 30px;
 	}
+
+	.sign-container .card.card.card-content img {
+		height: 200px;
+		width: 200px;
+	}
 	.sign-container .card {
 		width: 90%;
 	}
@@ -1456,6 +1461,9 @@ footer p {
 	.single-course-container .single-course-title span {
 		line-height: 25px;
 	}
+	.sign-container .card.card-content button {
+		width: 100% !important;
+	}
 }
 
 @media (min-width: 450px) {
@@ -1548,6 +1556,11 @@ footer p {
 		width: 100%;
 	}
 
+	.sign-container .card.card.card-content img {
+		height: 304px;
+		width: 304px;
+	}
+
 	.single-course-container .comments ul li .comment-container .comment-header {
 		flex-direction: row;
 		margin-bottom: 15px;
@@ -1626,6 +1639,9 @@ footer p {
 	}
 	.sign-container .card {
 		width: 600px;
+	}
+	.sign-container .card.card-content button {
+		width: 200px !important;
 	}
 	.single-course-container {
 		width: 700px;

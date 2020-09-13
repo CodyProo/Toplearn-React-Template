@@ -32,8 +32,8 @@ const Signup = () => {
 							{args.map((element) => (
 								<SignInput {...element} key={element.name} />
 							))}
-							<div className='col-md-12 text-left mt-3'>
-								<button>ثبت نام در سایت</button>
+							<div className='col-md-12 text-left my-3'>
+								<button className=''>ثبت نام در سایت</button>
 							</div>
 						</form>
 						<SignupLink />
