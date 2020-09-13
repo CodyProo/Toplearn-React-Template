@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../components/common/Footer';
 import Layout from '../components/common/Layout';
-import { Row, Col, Card, CardImg, CardBody } from 'reactstrap';
+import { Row } from 'reactstrap';
 //
 import UserOne from '../assets/images/teachers/iman_madaeny.jpg';
 import UserTwo from '../assets/images/teachers/mohammad_ghari.jpg';
@@ -11,8 +11,7 @@ import UserFive from '../assets/images/teachers/user-nine.jpeg';
 import UserSix from '../assets/images/teachers/sajad_bagherzadeh.jpg';
 import UserSeven from '../assets/images/teachers/younes_ghorbany.jpg';
 import UserEight from '../assets/images/teachers/nima_ladmakhi.png';
-import { IoMdPerson } from 'react-icons/io';
-import { Link } from 'react-router-dom';
+import TeacherCard from '../components/archives-teacher/TeacherCard';
 
 const ArchiveTeachers = () => {
 	const teachers = [
@@ -60,25 +59,7 @@ const ArchiveTeachers = () => {
 					<div className='archive-teachers-content'>
 						<Row>
 							{teachers.map((element) => (
-								<Col
-									className='mb-5'
-									xl={3}
-									lg={4}
-									md={6}
-									sm={12}
-									key={element.name}>
-									<Card className='text-right'>
-										<CardImg src={element.profile} />
-										<CardBody>
-											<div className='content-teacher'>
-												<span>
-													<IoMdPerson />
-												</span>
-												<Link to='/'>{element.name}</Link>
-											</div>
-										</CardBody>
-									</Card>
-								</Col>
+								<TeacherCard data={element} key={element.name} />
 							))}
 						</Row>
 					</div>
