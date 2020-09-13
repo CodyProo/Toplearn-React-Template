@@ -193,34 +193,54 @@ const HeaderSmall = ({ isopen, toggleNav, closeNav }) => {
 				</ul>
 				<ul>
 					<li>
-						<Link to='/'>منوی دسترسی</Link>
+						<Link to='/' onClick={closeNav}>
+							منوی دسترسی
+						</Link>
 					</li>
 					<li>
-						<Link to='/archive/courses'>آخرین دوره ها</Link>
+						<Link to='/archive/courses' onClick={closeNav}>
+							آخرین دوره ها
+						</Link>
 					</li>
 					<li>
-						<Link to='/archive/teachers'>مدرسین</Link>
+						<Link to='/archive/teachers' onClick={closeNav}>
+							مدرسین
+						</Link>
 					</li>
 					<li>
-						<Link to='/'>همکاری با تاپ لرن</Link>
+						<Link to='/' onClick={closeNav}>
+							همکاری با تاپ لرن
+						</Link>
 					</li>
 					<li>
-						<Link to='/'>بلاگ</Link>
+						<Link to='/' onClick={closeNav}>
+							بلاگ
+						</Link>
 					</li>
 					<li>
-						<Link to='/'>درخاست آموزشی</Link>
+						<Link to='/' onClick={closeNav}>
+							درخاست آموزشی
+						</Link>
 					</li>
 					<li>
-						<Link to='/'>پرسش و پاسخ</Link>
+						<Link to='/' onClick={closeNav}>
+							پرسش و پاسخ
+						</Link>
 					</li>
 					<li>
-						<Link to='/'>درخاست مشاوره</Link>
+						<Link to='/' onClick={closeNav}>
+							درخاست مشاوره
+						</Link>
 					</li>
 					<li>
-						<Link to='/'>تماس با ما</Link>
+						<Link to='/' onClick={closeNav}>
+							تماس با ما
+						</Link>
 					</li>
 					<li>
-						<Link to='/'>درباره ما</Link>
+						<Link to='/' onClick={closeNav}>
+							درباره ما
+						</Link>
 					</li>
 				</ul>
 			</div>
