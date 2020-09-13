@@ -67,7 +67,13 @@ const Header = ({ is_show_content }) => {
 
 				{/* must login */}
 				<div className='panel_section'>
-					<span>ورود</span>
+					<span>
+						{' '}
+						<Link to='/login' className='text-white text-decoration-none'>
+							{' '}
+							ورود{' '}
+						</Link>
+					</span>
 					<span>/</span>
 					<span>
 						<Link to='/signup' className='text-white text-decoration-none'>
