@@ -191,6 +191,38 @@ const HeaderSmall = ({ isopen, toggleNav, closeNav }) => {
 						</li>
 					))}
 				</ul>
+				<ul>
+					<li>
+						<Link to='/'>منوی دسترسی</Link>
+					</li>
+					<li>
+						<Link to='/archive/courses'>آخرین دوره ها</Link>
+					</li>
+					<li>
+						<Link to='/archive/teachers'>مدرسین</Link>
+					</li>
+					<li>
+						<Link to='/'>همکاری با تاپ لرن</Link>
+					</li>
+					<li>
+						<Link to='/'>بلاگ</Link>
+					</li>
+					<li>
+						<Link to='/'>درخاست آموزشی</Link>
+					</li>
+					<li>
+						<Link to='/'>پرسش و پاسخ</Link>
+					</li>
+					<li>
+						<Link to='/'>درخاست مشاوره</Link>
+					</li>
+					<li>
+						<Link to='/'>تماس با ما</Link>
+					</li>
+					<li>
+						<Link to='/'>درباره ما</Link>
+					</li>
+				</ul>
 			</div>
 		</div>
 	);
