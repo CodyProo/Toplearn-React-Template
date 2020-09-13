@@ -1428,6 +1428,9 @@ footer p {
 		font-size: 15px;
 		line-height: 30px;
 	}
+	.description {
+		margin-right: 0;
+	}
 	.single-teachers-container .single-teachers-title {
 		flex-direction: column;
 		justify-content: center;
@@ -1805,6 +1808,9 @@ footer p {
 	.courses-container .courses-content .card .card-img,
 	.single-teachers-container .courses-content .card .card-img {
 		height: 250px;
+	}
+	.description {
+		margin-right: 30px;
 	}
 	.single-teachers-container .single-teachers-content img {
 		margin-bottom: 0;

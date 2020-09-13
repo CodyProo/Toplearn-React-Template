@@ -106,9 +106,9 @@ const SingleTeacher = () => {
 								<div className='d-flex justify-content-center align-items-center'>
 									<img src={UserOne} alt='' />
 								</div>
-								<div className='mr-4'>
+								<div className='description'>
 									<h4 className='username mt-3'>ایمان مدائنی</h4>
-									<div className='mt-4 description'>
+									<div className='mt-4'>
 										<p>
 											ایمان مدائنی هستم ، مدرس بین المللی و رسمی مایکروسافت .
 										</p>
